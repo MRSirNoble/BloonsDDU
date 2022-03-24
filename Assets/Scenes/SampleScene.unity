@@ -692,6 +692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jump: 5
+  tempForScriptableObject: 0
 --- !u!1 &1128139952
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +899,7 @@ GameObject:
   - component: {fileID: 1412804874}
   - component: {fileID: 1412804873}
   - component: {fileID: 1412804875}
+  - component: {fileID: 1412804876}
   m_Layer: 0
   m_Name: Red
   m_TagString: Enemy
@@ -988,6 +990,19 @@ CircleCollider2D:
   m_Offset: {x: 0.0000015780352, y: 0.025417637}
   serializedVersion: 2
   m_Radius: 0.5258975
+--- !u!114 &1412804876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412804872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fc785af14ef0b41b5bfd1c0f2d2b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 3
 --- !u!1 &1829011656
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +1014,7 @@ GameObject:
   - component: {fileID: 1829011658}
   - component: {fileID: 1829011657}
   - component: {fileID: 1829011659}
+  - component: {fileID: 1829011660}
   m_Layer: 0
   m_Name: Blue
   m_TagString: Enemy
@@ -1089,6 +1105,19 @@ CircleCollider2D:
   m_Offset: {x: -0.026881933, y: 0}
   serializedVersion: 2
   m_Radius: 0.5946243
+--- !u!114 &1829011660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829011656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fc785af14ef0b41b5bfd1c0f2d2b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 0
 --- !u!1 &1932631401
 GameObject:
   m_ObjectHideFlags: 0

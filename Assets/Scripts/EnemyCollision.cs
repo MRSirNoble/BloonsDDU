@@ -7,6 +7,7 @@ public class EnemyCollision : MonoBehaviour
 
     public float speed;
     public float jump;
+    public int tempForScriptableObject;
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class EnemyCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            tempForScriptableObject += collision.gameObject.GetComponent<coinScript>().coins;
             Destroy(collision.gameObject);
         }
     }

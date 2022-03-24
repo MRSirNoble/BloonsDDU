@@ -18,7 +18,7 @@ public class EnemyCollision : MonoBehaviour
 
     // Update is called once per frame
 
-    private void FixedUpdate()
+    private void Update()
     {
 
         rb.velocity = new Vector2(speed, rb.velocity.y);

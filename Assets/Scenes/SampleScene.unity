@@ -693,6 +693,7 @@ MonoBehaviour:
   speed: 5
   jump: 5
   tempForScriptableObject: 0
+  coinsCollected: {fileID: 11400000, guid: 77a7fca09a876de4ba8c7aad678abf28, type: 2}
 --- !u!1 &1128139952
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,7 +968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412804872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3377, y: 0.5269, z: 0}
+  m_LocalPosition: {x: 1.3377, y: -1.06, z: 0}
   m_LocalScale: {x: 1.0576, y: 1.0576, z: 1.0576}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1082,7 +1083,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829011656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.996315, y: 0.58764017, z: 0}
+  m_LocalPosition: {x: 4.996315, y: -1.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1117,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fc785af14ef0b41b5bfd1c0f2d2b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
+  coins: 3
 --- !u!1 &1932631401
 GameObject:
   m_ObjectHideFlags: 0

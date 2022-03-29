@@ -691,9 +691,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jump: 5
+  jump: 10
   tempForScriptableObject: 0
   coinsCollected: {fileID: 11400000, guid: 77a7fca09a876de4ba8c7aad678abf28, type: 2}
+  distance: 1.5
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  jumpCount: 1
 --- !u!1 &1128139952
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +794,7 @@ GameObject:
   - component: {fileID: 1299417451}
   - component: {fileID: 1299417450}
   - component: {fileID: 1299417452}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}

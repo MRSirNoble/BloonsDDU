@@ -10,6 +10,10 @@ public class EnemyCollision : MonoBehaviour
     public int tempForScriptableObject;
     public Currencyfloat coinsCollected;
     Rigidbody2D rb;
+    public float distance;
+    public LayerMask mask;
+    bool grounded;
+    int jumpCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +24,28 @@ public class EnemyCollision : MonoBehaviour
 
     private void Update()
     {
+        RaycastHit2D hit;
+        hit = Physics2D.Raycast(transform.position, Vector2.down, distance, mask);
+        Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
+        if (hit)
+        {
+            Debug.Log(hit.collider.name);
+            grounded = true;
+            jumpCount = 1;
+        }
+
+        else
+        {
+            grounded = false;
+        }
+
 
         rb.velocity = new Vector2(speed, rb.velocity.y);
-        
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (grounded == true || jumpCount > 0)) 
         {
             rb.velocity = new Vector2(speed, jump);
+            jumpCount -= 1;
         }
     }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCollision : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
 
     public float speed;
@@ -11,9 +11,13 @@ public class EnemyCollision : MonoBehaviour
     public Currencyfloat coinsCollected;
     Rigidbody2D rb;
     public float distance;
+    public float dartDistance;
     public LayerMask mask;
+    public LayerMask dartMask;
     bool grounded;
     int jumpCount;
+    public GameObject dartObject;
+    public Transform spawnPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +41,15 @@ public class EnemyCollision : MonoBehaviour
         else
         {
             grounded = false;
+        }
+
+        RaycastHit2D dart;
+        dart = Physics2D.Raycast(transform.position, Vector2.right, dartDistance, dartMask);
+        Debug.DrawRay(transform.position, Vector2.right * dartDistance, Color.blue);
+        if(dart)
+        {
+            Debug.Log(dart.collider.name + " Dart");
+            Instantiate(dartObject, spawnPosition.position, Quaternion.identity);
         }
 
 

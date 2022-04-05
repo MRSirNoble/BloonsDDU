@@ -46,7 +46,7 @@ public class PlayerScript : MonoBehaviour
         RaycastHit2D dart;
         dart = Physics2D.Raycast(transform.position, Vector2.right, dartDistance, dartMask);
         Debug.DrawRay(transform.position, Vector2.right * dartDistance, Color.blue);
-        if(dart)
+        if (dart)
         {
             Debug.Log(dart.collider.name + " Dart");
             Instantiate(dartObject, spawnPosition.position, Quaternion.identity);
@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour
 
         rb.velocity = new Vector2(speed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && (grounded == true || jumpCount > 0)) 
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (grounded == true || jumpCount > 0))
         {
             rb.velocity = new Vector2(speed, jump);
             jumpCount -= 1;
@@ -71,3 +71,4 @@ public class PlayerScript : MonoBehaviour
         }
     }
 }
+

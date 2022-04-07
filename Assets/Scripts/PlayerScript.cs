@@ -52,7 +52,7 @@ public class PlayerScript : MonoBehaviour
             Instantiate(dartObject, spawnPosition.position, Quaternion.identity);
         }
 
-
+         
         rb.velocity = new Vector2(speed, rb.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && (grounded == true || jumpCount > 0))

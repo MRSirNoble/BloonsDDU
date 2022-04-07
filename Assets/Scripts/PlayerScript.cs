@@ -18,10 +18,12 @@ public class PlayerScript : MonoBehaviour
     int jumpCount;
     public GameObject dartObject;
     public Transform spawnPosition;
+    List<GameObject> baloonShotAt;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        baloonShotAt = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -43,13 +45,18 @@ public class PlayerScript : MonoBehaviour
             grounded = false;
         }
 
-        RaycastHit2D dart;
-        dart = Physics2D.Raycast(transform.position, Vector2.right, dartDistance, dartMask);
+        RaycastHit2D balloonHit;
+        balloonHit = Physics2D.Raycast(transform.position, Vector2.right, dartDistance, dartMask);
         Debug.DrawRay(transform.position, Vector2.right * dartDistance, Color.blue);
-        if (dart)
+        if (balloonHit)
         {
-            Debug.Log(dart.collider.name + " Dart");
-            Instantiate(dartObject, spawnPosition.position, Quaternion.identity);
+            if(baloonShotAt.Contains(balloonHit.collider.gameObject) == false)
+            {
+                Debug.Log(baloonShotAt.Count);
+                Instantiate(dartObject, spawnPosition.position, Quaternion.identity);
+                baloonShotAt.Add(balloonHit.collider.gameObject);
+            }
+           
         }
 
          

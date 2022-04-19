@@ -8,6 +8,8 @@ public class balloonSpawner : MonoBehaviour
     public float spawnRate = 2f;
     float nextSpawn = 0f;
     int whatToSpawn;
+    public float minSpawn;
+    public float maxSpawn;
     void Start()
     {
         
@@ -18,17 +20,18 @@ public class balloonSpawner : MonoBehaviour
     {
         if (Time.time > nextSpawn)
         {
+            float randomLocation = Random.Range(minSpawn, maxSpawn);
             whatToSpawn = Random.Range(1, 3);
             Debug.Log(whatToSpawn);
             
             switch (whatToSpawn)
             {
                 case 1:
-                    Instantiate(blue, transform.position, Quaternion.identity);
+                    Instantiate(blue, transform.position = new Vector2(transform.position.x, randomLocation), Quaternion.identity);
                     break;
 
                 case 2:
-                    Instantiate(red, transform.position, Quaternion.identity);
+                    Instantiate(red, transform.position = new Vector2(transform.position.x, randomLocation), Quaternion.identity);
                     break;
             }
 

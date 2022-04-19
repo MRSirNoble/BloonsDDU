@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  jump: 6
+  jump: 7
   tempForScriptableObject: 0
   coinsCollected: {fileID: 11400000, guid: 77a7fca09a876de4ba8c7aad678abf28, type: 2}
   distance: 1.5
@@ -948,6 +948,8 @@ MonoBehaviour:
   blue: {fileID: 7428468447841752467, guid: 58de50f9535593847b45043b566fdb12, type: 3}
   red: {fileID: 46435229542014941, guid: 62d57ef60d80d5f47870cb23a27525ff, type: 3}
   spawnRate: 2
+  minSpawn: -2
+  maxSpawn: 2
 --- !u!1 &1842817926
 GameObject:
   m_ObjectHideFlags: 0

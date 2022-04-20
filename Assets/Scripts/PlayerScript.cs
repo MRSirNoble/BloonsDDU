@@ -19,6 +19,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject dartObject;
     public Transform spawnPosition;
     List<GameObject> baloonShotAt;
+    public GameObject spawnPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +76,11 @@ public class PlayerScript : MonoBehaviour
         {
             coinsCollected.Currency += collision.gameObject.GetComponent<coinScript>().coins;
             Destroy(collision.gameObject);
+        }
+
+        if(collision.gameObject.tag == "SpawnPoint")
+        {
+            
         }
     }
 }

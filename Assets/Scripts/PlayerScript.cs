@@ -77,11 +77,6 @@ public class PlayerScript : MonoBehaviour
             coinsCollected.Currency += collision.gameObject.GetComponent<coinScript>().coins;
             Destroy(collision.gameObject);
         }
-
-        if(collision.gameObject.tag == "SpawnPoint")
-        {
-            
-        }
     }
 }
 

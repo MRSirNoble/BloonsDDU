@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4cd6a1bf3412a428ec0451adbb9f87, type: 3}
   m_Name: PlayerCurrency
   m_EditorClassIdentifier: 
-  Currency: 99
+  Currency: 0

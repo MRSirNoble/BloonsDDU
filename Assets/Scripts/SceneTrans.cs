@@ -5,12 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneTrans : MonoBehaviour
 {
-    GameObject overlay;
-
     public void LoadScene(string sceneName)
     {
-        overlay.active = true;
-        overlay.GetComponent<Animator>().SetTrigger("Fade");
-        //SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 }

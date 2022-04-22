@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour
     public Transform spawnPosition;
     List<GameObject> baloonShotAt;
     public GameObject spawnPoint;
-    public bool jumpable;
+    public EnableUpgrades jumpable;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +64,7 @@ public class PlayerScript : MonoBehaviour
          
         rb.velocity = new Vector2(speed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && (grounded == true || jumpCount > 0) && jumpable == true)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (grounded == true || jumpCount > 0) && jumpable.EnableValue == true)
         {
             rb.velocity = new Vector2(speed, jump);
             jumpCount -= 1;

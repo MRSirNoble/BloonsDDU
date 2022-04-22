@@ -7,9 +7,14 @@ using UnityEngine;
 public class SceneLoader : MonoBehaviour
 {
     public Animator CrossFade;
-    public bool no;
 
-    public void LoadScene()
+    private void Update()
+    {
+       // if (Input.GetMouseButtonDown(0))
+            
+    }
+
+    public void StartLoad()
     {
         StartCoroutine(LoadNextScene());
     }
